@@ -30,19 +30,19 @@
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>RELEASE</version>
+            <version>24.0.1</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>itext7-core</artifactId>
-            <version>LATEST</version>
+            <version>7.2.3</version>
         </dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>html2pdf</artifactId>
-            <version>LATEST</version>
+            <version>4.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.itextpdf</groupId>
@@ -50,6 +50,11 @@
             <version>3.0.2</version>
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/typography-3.0.2.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
