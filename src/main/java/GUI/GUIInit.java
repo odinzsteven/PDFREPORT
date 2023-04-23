@@ -1,5 +1,9 @@
 package GUI;
 
+import javax.swing.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
 public class GUIInit implements Runnable{
 
         public void run() {
