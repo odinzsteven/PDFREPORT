@@ -23,8 +23,8 @@
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
-            <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
+            <artifactId>kotlin-test-junit</artifactId>
+            <version>LATEST</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -33,17 +33,13 @@
             <version>24.0.1</version>
             <scope>compile</scope>
         </dependency>
-
         <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>itext7-core</artifactId>
-            <version>7.2.3</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
+            <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>com.itextpdf</groupId>
-            <artifactId>html2pdf</artifactId>
-            <version>4.0.3</version>
-        </dependency>
+        
         <dependency>
             <groupId>com.itextpdf</groupId>
             <artifactId>typography</artifactId>
@@ -51,18 +47,129 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/libs/typography-3.0.2.jar</systemPath>
         </dependency>
+
+        <!-- barcodes-7.2.5.jar -->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>2.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.2</version>
-            <scope>test</scope>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>barcodes</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/barcodes-7.2.5.jar</systemPath>
         </dependency>
 
+        <!-- commons-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>commons</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/commons-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- font-asian-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>font-asian</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/font-asian-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- forms-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>forms</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/forms-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- html2pdf-4.0.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>html2pdf</artifactId>
+            <version>4.0.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/html2pdf-4.0.5.jar</systemPath>
+        </dependency>
+
+        <!-- hyph-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>hyph</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/hyph-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- io-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>io</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/io-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- kernel-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>kernel</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/kernel-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- layout-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>layout</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/layout-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- pdfa-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>pdfa</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/pdfa-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- sign-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>sign</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/sign-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- styled-xml-parser-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>styled-xml-parser</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/styled-xml-parser-7.2.5.jar</systemPath>
+        </dependency>
+
+        <!-- svg-7.2.5.jar -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>svg</artifactId>
+            <version>7.2.5</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/svg-7.2.5.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>LATEST</version>
+        </dependency>
     </dependencies>
 
     <repositories>
@@ -72,6 +179,7 @@
             <url>https://maven.google.com/</url>
         </repository>
     </repositories>
+
 
     <build>
         <plugins>

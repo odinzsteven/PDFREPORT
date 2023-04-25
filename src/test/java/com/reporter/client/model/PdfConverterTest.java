@@ -2,17 +2,27 @@ package com.reporter.client.model;
 
 import org.junit.Test;
 
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import java.io.*;
+import java.util.Scanner;
 
 public class PdfConverterTest {
     @Test
     public void basicGeneration() throws FileNotFoundException {
-        PdfConverter pdfConverter = new PdfConverter(() -> "<h1>hello</h1><h3>world</h3>");
+        // TODO#2 read these from the UI
+        String workdir = "C:\\html_test";
+        String htmlFile = "wood_bill_simple.html";
 
-        pdfConverter.generatePDF(new FileOutputStream("out.pdf"));
+        // TODO#1 register file watcher at the workdir and call refresh in each update
+        refresh(workdir, htmlFile);
+    }
 
+    private void refresh(String workdir, String file) throws FileNotFoundException {
+        File outputDir = new File("out/pdf/");
+        outputDir.mkdirs();
+        try (Scanner scanner = new Scanner(new File(workdir, file))) {
+            scanner.useDelimiter("\\Z");
+            File output = new File(outputDir, "wood_bill_" + System.currentTimeMillis() + ".pdf");
+            PdfConverter.INSTANCE.generatePDF(workdir, scanner.next(), new FileOutputStream(output));
+        }
     }
 }

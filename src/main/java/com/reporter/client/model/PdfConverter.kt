@@ -2,42 +2,55 @@ package com.reporter.client.model
 
 import com.itextpdf.html2pdf.ConverterProperties
 import com.itextpdf.html2pdf.HtmlConverter
-import com.itextpdf.io.font.PdfEncodings
 import com.itextpdf.kernel.geom.PageSize
 import com.itextpdf.kernel.pdf.CompressionConstants
 import com.itextpdf.kernel.pdf.PdfDocument
 import com.itextpdf.kernel.pdf.PdfWriter
 import com.itextpdf.layout.font.FontProvider
 import com.itextpdf.layout.font.FontSet
+import java.io.InputStream
 import java.io.OutputStream
-import java.util.function.Supplier
 
-class PdfConverter(
-    //val fontNamesProvider: Supplier<Collection<String>> = { emptyList<String>() },
-    val htmlProvider: Supplier<String>,
-) {
+object PdfConverter {
+    private val fontDirs = arrayOf(
+        "Amiri",
+        "Cairo",
+        "Lateef",
+        "MarkaziText",
+        "NotoNaskhArabic",
+        "ReadexPro",
+        "ScheherazadeNew",
+        "Vazirmatn",
+    )
 
-    val resourceRetriever: PdfResourceRetriever = IResourceRetrieverImpl()
-
-    private val fontSets = loadFontSet()
+    private val fontSets: FontSet = loadFontSet()
 
     private fun loadFontSet() = FontSet().apply {
-        //resourceRetriever.loadFontsBlocking(fontNamesProvider.get()).forEach { resource ->
-            //addFont(resource, PdfEncodings.IDENTITY_H)
-        //}
+        //     resourceRetriever.loadFontsBlocking(fontNamesProvider.get()).forEach { resource ->
+        //         addFont(resource, PdfEncodings.IDENTITY_H)
+        //     }
 
-        //addFont(readFile("cario/regular.ttl"), PdfEncodings.IDENTITY_H)
-        //addFont(readFile("cario/bold.ttl"), PdfEncodings.IDENTITY_H)
+        fontDirs.forEach { dir ->
+            readFontResource(loadResource("fonts/$dir/Bold.ttf"))
+            readFontResource(loadResource("fonts/$dir/Regular.ttf"))
+        }
     }
 
-    private fun buildConverterProperties(): ConverterProperties =
+    private fun loadResource(path: String): InputStream? =
+        javaClass.classLoader.getResourceAsStream(path)
+
+    private fun FontSet.readFontResource(input: InputStream?) = input?.let {
+        this.addFont(it.readAllBytes(), com.itextpdf.io.font.PdfEncodings.IDENTITY_H)
+    }
+
+    private fun buildConverterProperties(workdir: String): ConverterProperties =
         ConverterProperties().apply {
-            resourceRetriever = resourceRetriever
+            resourceRetriever = IResourceRetrieverImpl(workdir)
             isImmediateFlush = false
             fontProvider = FontProvider(fontSets, "Helvetica")
         }
 
-    fun generatePDF(outputStream: OutputStream) {
+    fun generatePDF(workDir: String, html: String, outputStream: OutputStream) {
         val pdfWriter = PdfWriter(outputStream).apply {
             compressionLevel = CompressionConstants.BEST_COMPRESSION
             setSmartMode(true)
@@ -47,9 +60,9 @@ class PdfConverter(
             defaultPageSize = PageSize.A4
         }.use { pdfDocument ->
             val document = HtmlConverter.convertToDocument(
-                htmlProvider.get(),
+                html,
                 pdfDocument,
-                buildConverterProperties()
+                buildConverterProperties(workDir)
             )
             document.setMargins(0f, 0f, 0f, 0f)
             document.relayout()
