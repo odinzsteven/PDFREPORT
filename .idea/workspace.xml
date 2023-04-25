@@ -4,50 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="733135ec-7fde-485b-9b59-4f6d8a620026" name="Changes" comment="init the body of this app">
-      <change afterPath="$PROJECT_DIR$/libs/barcodes-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/commons-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/commons-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/commons-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/desktop.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/font-asian-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/forms-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/forms-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/forms-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/html2pdf-4.0.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/html2pdf-4.0.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/html2pdf-4.0.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/hyph-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/io-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/io-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/io-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/kernel-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/kernel-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/kernel-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/layout-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/layout-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/layout-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/pdfa-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/pdfa-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/pdfa-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/sign-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/sign-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/sign-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/styled-xml-parser-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/styled-xml-parser-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/styled-xml-parser-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/svg-7.2.5-javadoc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/svg-7.2.5-sources.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/svg-7.2.5.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/Test.java" afterDir="false" />
+    <list default="true" id="733135ec-7fde-485b-9b59-4f6d8a620026" name="Changes" comment="add functionality of converting pdf">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUI/GUIInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUI/GUIInit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reporter/client/model/IResourceRetrieverImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reporter/client/model/IResourceRetrieverImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/reporter/client/model/PdfConverter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/reporter/client/model/PdfConverter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/IResourceRetrieverImplTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/PdfConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/PdfConverterTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +57,9 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   }
@@ -220,7 +181,7 @@
       <workItem from="1682358831201" duration="62000" />
       <workItem from="1682418190617" duration="863000" />
       <workItem from="1682422193801" duration="198000" />
-      <workItem from="1682422428254" duration="11970000" />
+      <workItem from="1682422428254" duration="12931000" />
     </task>
     <task id="LOCAL-00001" summary="init the body of this app">
       <created>1682267719319</created>
@@ -243,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682270938201</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add functionality of converting pdf">
+      <created>1682434819503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682434819503</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,6 +220,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init the body of this app" />
-    <option name="LAST_COMMIT_MESSAGE" value="init the body of this app" />
+    <MESSAGE value="add functionality of converting pdf" />
+    <option name="LAST_COMMIT_MESSAGE" value="add functionality of converting pdf" />
   </component>
 </project>
