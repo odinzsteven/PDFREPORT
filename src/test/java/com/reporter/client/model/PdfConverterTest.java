@@ -3,6 +3,7 @@ package com.reporter.client.model;
 import org.junit.Test;
 
 import java.io.*;
+import java.nio.file.*;
 import java.util.Scanner;
 
 public class PdfConverterTest {
@@ -15,7 +16,6 @@ public class PdfConverterTest {
         // TODO#1 register file watcher at the workdir and call refresh in each update
         refresh(workdir, htmlFile);
     }
-
     private void refresh(String workdir, String file) throws FileNotFoundException {
         File outputDir = new File("out/pdf/");
         outputDir.mkdirs();

@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="733135ec-7fde-485b-9b59-4f6d8a620026" name="Changes" comment="add functionality of converting pdf">
+    <list default="true" id="733135ec-7fde-485b-9b59-4f6d8a620026" name="Changes" comment="add watcher functionality and test it">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reporter/client/model/FileWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/reporter/client/model/WatcherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/FileWatcherTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/PdfConverterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/PdfConverterTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/reporter/client/model/Test.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,28 +48,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "last_opened_file_path": "C:/Users/odinz/IdeaProjects/PDFREPORT/libs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/odinz/IdeaProjects/PDFREPORT/libs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.reporter.client.model" />
@@ -93,13 +99,13 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PdfConverterTest.basicGeneration">
-    <configuration name="GUIInit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GUI.GUIInit" />
+  <component name="RunManager" selected="Application.WatcherTest">
+    <configuration name="WatcherTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.reporter.client.model.WatcherTest" />
       <module name="PDFREPORT" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GUI.*" />
+          <option name="PATTERN" value="com.reporter.client.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -107,7 +113,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IResourceRetrieverImplTest.name" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileWatcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PDFREPORT" />
       <extension name="coverage">
         <pattern>
@@ -116,14 +122,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.reporter.client.model" />
-      <option name="MAIN_CLASS_NAME" value="com.reporter.client.model.IResourceRetrieverImplTest" />
-      <option name="METHOD_NAME" value="name" />
+      <option name="MAIN_CLASS_NAME" value="com.reporter.client.model.FileWatcherTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileWatcherTest.performCustomAction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PDFREPORT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.reporter.client.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.reporter.client.model" />
+      <option name="MAIN_CLASS_NAME" value="com.reporter.client.model.FileWatcherTest" />
+      <option name="METHOD_NAME" value="performCustomAction" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PdfConverterTest.basicGeneration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileWatcherTest.testFileWatcher" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PDFREPORT" />
       <extension name="coverage">
         <pattern>
@@ -132,8 +153,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.reporter.client.model" />
-      <option name="MAIN_CLASS_NAME" value="com.reporter.client.model.PdfConverterTest" />
-      <option name="METHOD_NAME" value="basicGeneration" />
+      <option name="MAIN_CLASS_NAME" value="com.reporter.client.model.FileWatcherTest" />
+      <option name="METHOD_NAME" value="testFileWatcher" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,10 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PdfConverterTest.basicGeneration" />
+        <item itemvalue="Application.WatcherTest" />
+        <item itemvalue="JUnit.FileWatcherTest" />
+        <item itemvalue="JUnit.FileWatcherTest.testFileWatcher" />
+        <item itemvalue="JUnit.FileWatcherTest.performCustomAction" />
         <item itemvalue="JUnit.Test.pathObject" />
-        <item itemvalue="Application.GUIInit" />
-        <item itemvalue="JUnit.IResourceRetrieverImplTest.name" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +203,10 @@
       <workItem from="1682358831201" duration="62000" />
       <workItem from="1682418190617" duration="863000" />
       <workItem from="1682422193801" duration="198000" />
-      <workItem from="1682422428254" duration="12931000" />
+      <workItem from="1682422428254" duration="12959000" />
+      <workItem from="1682504012761" duration="1850000" />
+      <workItem from="1682506525183" duration="4970000" />
+      <workItem from="1682516012051" duration="5496000" />
     </task>
     <task id="LOCAL-00001" summary="init the body of this app">
       <created>1682267719319</created>
@@ -211,7 +236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682434819503</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add functionality of converting pdf">
+      <created>1682457122500</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682457122500</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +253,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init the body of this app" />
     <MESSAGE value="add functionality of converting pdf" />
-    <option name="LAST_COMMIT_MESSAGE" value="add functionality of converting pdf" />
+    <MESSAGE value="add watcher functionality and test it" />
+    <option name="LAST_COMMIT_MESSAGE" value="add watcher functionality and test it" />
   </component>
 </project>
